@@ -183,19 +183,28 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="PV8-yh-saC">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="IQA-CW-RnH"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="zvW-sX-Rje"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="IQA-CW-RnH">
+                            <connections>
+                                <segue destination="FAh-rP-UXp" kind="unwind" unwindAction="unwindSegueWithSegue:" id="eUG-L4-zYA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="zvW-sX-Rje">
+                            <connections>
+                                <segue destination="FAh-rP-UXp" kind="unwind" identifier="saveSegue" unwindAction="unwindSegueWithSegue:" id="oS4-nA-diG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descriptionTetField" destination="aWu-Dl-gZn" id="3Lf-BC-aTt"/>
+                        <outlet property="descriptionTextField" destination="aWu-Dl-gZn" id="3Lf-BC-aTt"/>
                         <outlet property="emojiTextField" destination="Zwg-aF-3xS" id="p1B-bL-k2q"/>
                         <outlet property="nameTextField" destination="L81-bI-J6B" id="gcU-bf-4aH"/>
                         <outlet property="saveButton" destination="zvW-sX-Rje" id="rfv-Z6-m68"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2O-dc-PdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="FAh-rP-UXp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2576.811594202899" y="-54.241071428571423"/>
+            <point key="canvasLocation" x="2474" y="-54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d1L-R8-yPG">
